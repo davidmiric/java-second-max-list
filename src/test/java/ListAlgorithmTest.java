@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 
 public class ListAlgorithmTest {
 
-	private static final long MAXIMUM_TIME_IN_MS = 1000;
+	private static final long MAXIMUM_TIME_IN_MS = 5000;
 
 	@Test
 	public void testSecondMaxWhenNullListReturnEmpty() {
@@ -63,12 +63,12 @@ public class ListAlgorithmTest {
 		var result = ListAlgorithm.findSecondMaxFrom(list);
 		var end = System.currentTimeMillis();
 		// then
-		assertTrue((end-start) < MAXIMUM_TIME_IN_MS);
+		assertTrue((end - start) < MAXIMUM_TIME_IN_MS);
 	}
 
 	private List<Integer> createHugeList() {
 		List<Integer> list = new ArrayList<>();
-		for (int i = 0; i < 2000000; i++) {
+		for (int i = 0; i < 200000000; i++) {
 			list.add(-1000000 + ((int) (Math.random() * 2000000d)));
 		}
 		return list;
