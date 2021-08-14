@@ -1,11 +1,11 @@
 package com.adsquare.davidmiric;
 
-import javax.naming.OperationNotSupportedException;
 import java.util.List;
+import java.util.Optional;
 
 public class ListAlgorithm {
 
-	public static Integer findSecondMaxFrom(List<Integer> list) throws OperationNotSupportedException {
-		throw new OperationNotSupportedException();
+	public static Optional<Integer> findSecondMaxFrom(List<Integer> list)  {
+		return Optional.empty();
 	}
 }
