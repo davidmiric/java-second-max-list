@@ -8,5 +8,5 @@ Clone the repository. Run the command: ./mvnw install That will build project an
 
 # Comments
 
-There are tests for some common scenarios and also one test for performance. That one is not mandatory and can be
-deleted, but it's kept just to demonstrate that performance was taken in account.
+List is processed in 'one-by-one' manner and time complexity is O(n). It is said that list is passed, but also if it was
+streamed of integers then it could make it possible to process large sets of data without exceeding heap memory.
