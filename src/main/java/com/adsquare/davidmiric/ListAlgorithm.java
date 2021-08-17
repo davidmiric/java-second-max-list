@@ -16,8 +16,11 @@ public class ListAlgorithm {
 			if (firstMax == null) {
 				firstMax = number;
 			} else if (secondMax == null) {
-				if (!firstMax.equals(number)) {
+				if (firstMax > number) {
 					secondMax = number;
+				} else if (firstMax < number) {
+					secondMax = firstMax;
+					firstMax = number;
 				}
 			} else if (number > firstMax) {
 				secondMax = firstMax;

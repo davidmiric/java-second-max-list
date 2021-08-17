@@ -40,6 +40,19 @@ public class ListAlgorithmTest {
 	}
 
 	@Test
+	public void testSecondMaxWhenSmallListThenReturnEmpty() {
+		// given
+		List<Integer> list1 = List.of(1, 2);
+		List<Integer> list2 = List.of(2, 1);
+		// when
+		var result = ListAlgorithm.findSecondMaxFrom(list1);
+		var result2 = ListAlgorithm.findSecondMaxFrom(list2);
+		// then
+		assertEquals(1, result.get().intValue());
+		assertEquals(1, result2.get().intValue());
+	}
+
+	@Test
 	public void testSecondMaxWhenMoreElementsThenReturnSecondHighest() {
 		// given
 		var list = List.of(5, -4, 12, 0, -1, 14);
